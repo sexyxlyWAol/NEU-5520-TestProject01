@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import {StyleSheet, Button, Image, TextInput, Text, View} from 'react-native';
 
-const Cat = () => {
+const Cat = props => {
   const name = 'Liyu';
   return (
     <View>
@@ -9,7 +9,7 @@ const Cat = () => {
         source={{uri: 'https://reactnative.dev/docs/assets/p_cat1.png'}}
         style={{width: 200, height: 200}}
       />
-      <Text>Hello, I am your cat, {name}</Text>
+      <Text>Hello, I am your cat, {props.name}</Text>
     </View>
   );
 };
@@ -17,7 +17,8 @@ const Cat = () => {
 const App = () => {
   return (
     <View>
-      <Cat />
+      <Cat name="Liyu" />
+      <Cat name="HAHAHA" />
     </View>
   );
 };
